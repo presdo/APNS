@@ -37,8 +37,8 @@ module APNS
     bytes
   end
 
-  def self.feedback
-    sock, ssl = self.feedback_connection
+  def self.feedback(pem, password)
+    sock, ssl = self.feedback_connection(pem, password)
 
     apns_feedback = []
 
